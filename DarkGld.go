@@ -87,7 +87,7 @@ func main() {
 
 	if util.Exists(*file) {
 		color.Green("[>] %s => EXE ", *file)
-		OUTFILE = OUTFILE = strings.Replace(path.Base(*file), path.Ext(*file), ".exe", -1)
+		OUTFILE = strings.Replace(path.Base(*file), path.Ext(*file), ".exe", -1)
 		templates.FileTemplate(dir+GOFILE, key, nonce, raw, *file, *protect)
 	}else {
 		color.Yellow("[>] Null => EXE")
